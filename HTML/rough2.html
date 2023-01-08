@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page name</title>
+        <link rel="stylesheet" href="C:\Users\Chandru\Desktop\webproject\CSS\rough2.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <div class = sidenav>
+            <div class = "logo_con">
+                <div class = "logo">
+                    <i class='bx bxl-react'></i>
+                    <div class="logo_name">HEADING
+                    </div>
+                </div>
+                <i class='bx bx-menu' id = "btn"></i>
+            </div>
+            <ul class="nav_list" style="padding-left:0px;">
+                <li>
+                    <i class='bx bx-search-alt' ></i>
+                    <input type = "text" placeholder="Search">
+                    <span class  = "tooltrip">Dasboard</span>
+             
+                </li>
+                <li>
+                    <a href="Chan2.html">
+                        <i class='bx bxs-hand-right'></i>
+                        <span class="link_names">Sub heading</span>
+                        <span class  = "tooltrip">Dasboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="chan3.html">
+                        <i class='bx bxs-hand-right'></i>
+                        <span class="link_names">Sub heading</span>
+                        <span class  = "tooltrip">Dasboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="chan4.html">
+                        <i class='bx bxs-hand-right'></i>
+                        <span class="link_names">Sub heading</span>
+                        <span class  = "tooltrip">Dasboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="chan5.html">
+                        <i class='bx bxs-hand-right'></i>
+                        <span class="link_names">Sub heading</span>
+                        <span class  = "tooltrip">Dasboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="chan6.html">
+                        <i class='bx bxs-hand-right'></i>
+                        <span class="link_names">Sub heading</span>
+                        <span class  = "tooltrip">Dasboard</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="pro_con">
+                <div class="pro">
+                    <div class = "pro_details">
+                        <!img src="">
+                        <div class="name_job">
+                            <div class="name">
+                            </div>
+                        </div>
+                        <a href="Chan.html">
+                        <i class='bx bx-log-out-circle' id ="logOut"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "header">
+        <table cellspacing = "50" class="tb">
+            <tr>
+                <td>
+                    <img src = "https://image.shutterstock.com/image-vector/logo-design-letter-tt-brand-260nw-1729855027.jpg" alt = "Teckz Tamizha" height = "100" width = "100" class="border">
+                </td>
+                <td>
+                    <h1 style = "color: white;text-shadow: 2px 2px 5px  black;">Teck sTamizha</h1>
+                </td>
+                <td>
+                    <div class="login">
+                        <form>    
+                        <br>
+                        User-Name:
+                        <input class="inputbox"name ="userName" type = "text" placeholder="UserName"><br><br>
+                        Password:
+                        <input class="inputbox"name ="password" type = "text" placeholder="********"><br><br>
+                        <button>Sign-in</button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        </div>
+        <hr>
+        
+        <div class="background">
+        <div class="row ">        
+            <div >
+               <h2>About</h2>
+                <p>Hi there, What's up..! it's teckz tamizha let have some fun with our tech in our home language and explore new technologies..</p>
+            </div>
+            <div >
+                <div class="vc">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jLYEuJ9fuso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" frameborder="0" allowfullscreen></iframe>
+                </div>
+            <div>
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div>
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            </div>
+        </div>
+        </div>
+        <br>
+        <div class="footer">
+            <table cellspacing = '10' class="tb">
+                <tr>
+                    <td><a href = "#">Contact</a></td>
+                </tr>
+            </table>
+        </div>
+        <script>
+            let btn = document.querySelector("#btn");
+            let sch = document.querySelector(".bx-search-alt");
+            let sidenav = document.querySelector(".sidenav");
+            btn.onclick=function(){
+                sidenav.classList.toggle("active");
+            }
+            sch.onclick=function(){
+                sidenav.classList.toggle("active");
+            }
+            function dropdownmenu()
+            {
+                var d = document.getElementById("dp");
+                if (d.className === "topnav")
+                {
+                    d.className += " responsive";
+                }
+                else
+                {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    </body>
+</html>

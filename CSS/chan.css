@@ -1,0 +1,234 @@
+
+body{
+    position: relative;
+    min-height: 100vh;
+    width:100%;
+    overflow: hidden;   
+}
+.body{
+    padding-top: 150px;
+}
+.titbar{
+    padding-top: 10px;
+}
+.sidenav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width:78px;
+    background: #11101d;
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+}
+.sidenav.active{
+    width: 240px;
+}
+.sidenav .logo_con .logo{
+    color:#fff;
+    display: flex;
+    height: 50px;
+    width:100%;
+    align-items:center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+.sidenav.active .logo_con .logo{
+    opacity: 1;
+    pointer-events: none;
+}
+.logo_con .logo i{
+    font-size: 28px;
+    margin-right: 5px;
+}
+.logo_con .logo .logo_name{
+    font-size: 20px;
+    font-weight: 400;
+}
+.sidenav #btn{
+    position: absolute;
+    color: #fff;
+    left: 50%;
+    top : 6px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%)
+}
+.sidenav.active #btn{
+    left: 90%;
+    
+}
+.sidenav ul{
+    margin-top: 20px;
+}
+.sidenav ul li{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 0 5px;
+    list-style: none;
+    line-height: 50px;
+    
+}
+.sidenav ul li a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+.sidenav ul li a:hover{
+    color: #11101d;
+    background: #fff;
+}
+.sidenav ul li i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+.sidenav .link_names{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+.sidenav.active .link_names{
+    opacity: 1;
+    pointer-events: auto;
+    
+}
+.sidenav ul li .tooltrip{
+    position: absolute;
+    height: 35px;
+    width: 122px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    left :122px;
+    top : 0;
+    transform: translate(-50%,-50%);
+    border-radius: 6px;
+    line-height: 35px;
+    text-align: center;
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+}
+.sidenav.active ul li .tooltrip{
+    display: none;
+}
+.sidenav ul li :hover .tooltrip{
+    top: 50%;
+    transition: all 0.5 ease;
+    opacity: 1;
+
+}
+.sidenav ul li input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left: 0;
+    border-radius: 12px;
+    border:none;
+    outline: none;
+    background: #1d1b31;
+    
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+}
+.sidenav ul li .bx-search-alt{
+    position: absolute;
+    z-index: 99;
+    color: #fff;
+    font-size: 22px;
+    transition: all 0.5s ease;
+}
+.sidenav ul li .bx-search-alt :hover{
+    background: #fff;
+    color: #1d1b31;
+}
+.sidenav .pro_con{
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    width:100%;
+}
+.sidenav .pro_con .pro{
+    position: relative;
+    padding: 10px 6px;
+    height: 60px;
+    background: none;
+    transition: all 0.4s ease;
+}
+.sidenav.active .pro_con .pro{
+    background: #1d1b31;
+}
+.pro_con .pro .pro_details{
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.sidenav.active .pro .pro_details{
+    opacity: 1;
+    pointer-events: auto;
+}
+.pro .pro_details img{
+    height: 45px;
+    width: 45px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+.pro #logOut{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    min-width: 50px;
+    line-height: 50px;
+    transform: translateX(-50px);
+    font-size: 20px;
+    align-items: center;
+    background:#1d1b31;
+    transition: all 0.4s ease;
+}
+
+.sidenav.active .pro #logOut{
+    position: absolute;
+    left: 88%;
+    align-items: center;
+    background: none
+}
+
+.titbar{
+    position: absolute;
+    height: 100%;
+    width :calc(100%-78px);
+    left: 98px;
+    transition: all 0.5s ease;
+}
+.sidenav.active ~ .titbar{
+    width :calc(100%-240px);
+    left: 300px;
+}
+.body{
+    position: absolute;
+    height: 100%;
+    width :calc(100%-78px);
+    left: 120px;
+    transition: all 0.5s ease;
+}
+.sidenav.active ~ .body{
+    width :calc(100%-240px);
+    left: 300px;
+}

@@ -1,0 +1,554 @@
+
+body{
+  
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: #efefef;
+}    
+.titbar{
+    padding-top: 10px;
+}
+.sidenav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width:78px;
+    background: #11101d;
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+}
+.sidenav.active{
+    width: 240px;
+}
+.sidenav .logo_con .logo{
+    color:#fff;
+    display: flex;
+    height: 50px;
+    width:100%;
+    align-items:center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+.sidenav.active .logo_con .logo{
+    opacity: 1;
+    pointer-events: none;
+}
+.logo_con .logo i{
+    font-size: 28px;
+    margin-right: 5px;
+}
+.logo_con .logo .logo_name{
+    font-size: 20px;
+    font-weight: 400;
+}
+.sidenav #btn{
+    position: absolute;
+    color: #fff;
+    left: 50%;
+    top : 6px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%)
+}
+.sidenav.active #btn{
+    left: 90%;
+    
+}
+.sidenav ul{
+    margin-top: 20px;
+}
+.sidenav ul li{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 0 5px;
+    list-style: none;
+    line-height: 50px;
+    
+}
+.sidenav ul li a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+.sidenav ul li a:hover{
+    color: #11101d;
+    background: #fff;
+}
+.sidenav ul li i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+.sidenav .link_names{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+.sidenav.active .link_names{
+    opacity: 1;
+    pointer-events: auto;
+    
+}
+.sidenav ul li .tooltrip{
+    position: absolute;
+    height: 35px;
+    width: 122px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    left :122px;
+    top : 0;
+    transform: translate(-50%,-50%);
+    border-radius: 6px;
+    line-height: 35px;
+    text-align: center;
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+}
+.sidenav.active ul li .tooltrip{
+    display: none;
+}
+.sidenav ul li :hover .tooltrip{
+    top: 50%;
+    transition: all 0.5 ease;
+    opacity: 1;
+
+}
+.sidenav ul li input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left: 0;
+    border-radius: 12px;
+    border:none;
+    outline: none;
+    background: #1d1b31;
+    
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+}
+.sidenav ul li .bx-search-alt{
+    position: absolute;
+    z-index: 99;
+    color: #fff;
+    font-size: 22px;
+    transition: all 0.5s ease;
+}
+.sidenav ul li .bx-search-alt :hover{
+    background: #fff;
+    color: #1d1b31;
+}
+.sidenav .pro_con{
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    width:100%;
+}
+.sidenav .pro_con .pro{
+    position: relative;
+    padding: 10px 6px;
+    height: 60px;
+    background: none;
+    transition: all 0.4s ease;
+}
+.sidenav.active .pro_con .pro{
+    background: #1d1b31;
+}
+.pro_con .pro .pro_details{
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.sidenav.active .pro .pro_details{
+    opacity: 1;
+    pointer-events: auto;
+}
+.pro .pro_details img{
+    height: 45px;
+    width: 45px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+.pro #logOut{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    min-width: 50px;
+    line-height: 50px;
+    transform: translateX(-50px);
+    font-size: 20px;
+    align-items: center;
+    background:#1d1b31;
+    transition: all 0.4s ease;
+}
+
+.sidenav.active .pro #logOut{
+    position: absolute;
+    left: 88%;
+    align-items: center;
+    background: none
+}
+
+.titbar{
+    position: absolute;
+    height: 100%;
+    width :calc(100%-78px);
+    left: 98px;
+    transition: all 0.5s ease;
+}
+.sidenav.active ~ .titbar{
+    width :calc(100%-240px);
+    left: 300px;
+}
+
+.sidenav.active ~ body{
+    width :calc(100%-240px);
+    left: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #efefef;  
+}
+.card_img{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 3px;
+}
+.cad_img .card_i{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border:4px solid #4070F4;
+}
+
+.slide_container{
+    max-width: 1120px;
+    width:100%;
+    padding-top: 100px;
+     
+}
+.slide_content{
+    margin: 0 40px;
+    overflow: hidden;
+    padding-top: 100px;
+    border-radius: 25px;
+}
+.card_img{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 3px;
+}
+.card_img .card_i{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border:0px solid #4070F4;
+}
+.card{
+    border-radius: 25px;
+    background-color: #fff;
+}
+.img_con, .card_con{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 10px 14px;
+}
+.img_con{
+    position: relative;
+    grid-row-gap: 5px; 
+    padding: 25px 0;
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width:100%;
+    background-color: #4070F4;
+    border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #4070F4;
+}
+.overlay::after{
+    background-color: #fff;
+    border-radius: 0 25px 0 0;
+}
+.name{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+.des{
+    font-size: 14px;
+    color: #707070;
+    text-align: center;   
+}
+.button{
+    font-size: 16px;
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    background-color:#4070F4;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button:hover{
+    background: #265DF2;
+}
+.swnav{
+    
+    color: #6E93F7;
+    transition: color 0.3s ease;
+}
+.swnav:hover{
+    color:#4070F4;
+}
+.swnav::before,
+.swnav::after{
+    font-size: 40px;
+}
+.swiper-button-next{
+    right: 0;
+}
+.swiper-button-pev{
+    left: 0;
+}
+@media screen and (max-width:768px) {
+    .swnav{
+        display: none;
+    }
+    .slide_content{
+        margin: 0 10px;
+    }
+}
+.cardcon{
+    padding-top: 100px;
+    display: flex;
+    position: absolute;
+   
+    width :calc(100%-78px);
+    left: 98px;
+    transition: all 0.5s ease;
+ 
+}
+.sidenav.active ~ .cardcon{
+    width :calc(100%-240px);
+    left: 300px;
+}
+
+.sidenav.active ~ .slide_container{
+    width :calc(100%-240px);
+    left: 300px;
+}
+
+.sidenav.active ~ .slide_content{
+    width :calc(100%-240px);
+    left: 300px;
+}
+
+.sidenav.active ~ .card{
+    width :calc(100%-240px);
+    left: 300px;
+}
+
+.sidenav.active ~ .overlay{
+    width :calc(100%-240px);
+    left: 300px;
+}
+.card_img_2{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 3px;
+}
+.cad_img_2 .card_i_2{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border:0px solid #4070F4;
+}
+
+.slide_container_2{
+    max-width: 1120px;
+    width:100%;
+    padding-top: 400px;
+     
+}
+.slide_content_2{
+    margin: 0 40px;
+    overflow: hidden;
+    padding-top: 400px;
+    border-radius: 25px;
+}
+.card_img_2{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 3px;
+}
+
+.card_2{
+    border-radius: 25px;
+    background-color: #fff;
+}
+.img_con_2, .card_con_2{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 10px 14px;
+}
+.img_con_2{
+    position: relative;
+    grid-row-gap: 5px; 
+    padding: 25px 0;
+}
+.overlay_2{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width:100%;
+    background-color: #4070F4;
+    border-radius: 25px 25px 0 25px;
+}
+.overlay_2::before,
+.overlay_2::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #4070F4;
+}
+.overlay_2::after{
+    background-color: #fff;
+    border-radius: 0 25px 0 0;
+}
+.name_2{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+.des_2{
+    font-size: 14px;
+    color: #707070;
+    text-align: center;   
+}
+.button_2{
+    font-size: 16px;
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    background-color:#4070F4;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button_2:hover{
+    background: #265DF2;
+}
+.swnav_2{
+    
+    color: #6E93F7;
+    transition: color 0.3s ease;
+}
+.swnav_2:hover{
+    color:#4070F4;
+}
+.swnav_2::before,
+.swnav_2::after{
+    font-size: 40px;
+}
+.swiper-button-next_2{
+    right: 0;
+}
+.swiper-button-pev_2{
+    left: 0;
+}
+@media screen and (max-width:768px) {
+    .swnav_2{
+        display: none;
+    }
+    .slide_content_2{
+        margin: 0 10px;
+    }
+}
+.cardcon_2{
+    padding-top: 400px;
+    display: flex;
+    position: absolute;
+   
+    width :calc(100%-78px);
+    left: 98px;
+    transition: all 0.5s ease;
+ 
+}
+.sidenav.active ~ .cardcon_2{
+    width :calc(100%-240px);
+    left: 300px;
+}
+
+.sidenav.active ~ .slide_container_2{
+    width :calc(100%-240px);
+    left: 300px;
+}
+
+.sidenav.active ~ .slide_content_2{
+    width :calc(100%-240px);
+    left: 300px;
+}
+
+.sidenav.active ~ .card_2{
+    width :calc(100%-240px);
+    left: 300px;
+}
+
+.sidenav.active ~ .overlay_2{
+    width :calc(100%-240px);
+    left: 300px;
+}
