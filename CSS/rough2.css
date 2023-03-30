@@ -9,6 +9,9 @@
      left: 108px;
      transition: all 0.5s ease;
 }
+a{
+    color: #eeefe2;
+}
 .tb{ 
     width :calc(100%-78px);
     left: 98px;
